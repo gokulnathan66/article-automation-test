@@ -8,6 +8,7 @@ on:
 jobs:
   publish-hashnode:
     runs-on: ubuntu-latest
+    continue-on-error: false  # Fail the workflow if publishing fails
     steps:
       - name: Checkout content
         uses: actions/checkout@v4
