@@ -1,4 +1,4 @@
-name: Publish Articles
+name: Publish to Hashnode
 
 on:
   push:
@@ -19,7 +19,6 @@ jobs:
           hashnode-publication-id: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           hashnode-publication-host: ${{ secrets.HASHNODE_PUBLICATION_HOST }}
           github-token: ${{ secrets.VAR_EDIT_TOKEN_GIT }}
-          # Pass the saved variables as inputs
           saved-post-id: ${{ vars.HASHNODE_SAVED_POST_ID }}
           saved-post-slug: ${{ vars.HASHNODE_SAVED_POST_SLUG }}
           saved-post-title: ${{ vars.HASHNODE_SAVED_POST_TITLE }}
