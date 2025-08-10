@@ -1,12 +1,6 @@
 # Article Automation Test Repository
 
-<!-- Badges - GitHub only (not supported on Dev.to) -->
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://hashnode.com)
-[![Dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> **Platform Support**: ✅ GitHub Actions | ✅ Hashnode | ✅ Dev.to | 📄 MIT License
+**🚀 [GitHub Actions](https://github.com/features/actions) • 📚 [Hashnode](https://hashnode.com) • 📝 [Dev.to](https://dev.to) • 📄 MIT License**
 
 🧪 **Test repository demonstrating the multi-platform blog publishing system**
 
