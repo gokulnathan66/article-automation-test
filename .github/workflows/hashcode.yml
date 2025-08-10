@@ -1,0 +1,21 @@
+name: Publish Articles
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  publish-hashnode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content
+        uses: actions/checkout@v4
+        
+      - name: Publish to Hashnode
+        uses: gokulnathb/article-automation/hashnode-publish@main
+        with:
+          hashnode-pat: ${{ secrets.HASHNODE_PAT }}
+          hashnode-publication-id: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          hashnode-publication-host: ${{ secrets.HASHNODE_PUBLICATION_HOST }}
+          github-token: ${{ secrets.VAR_EDIT_TOKEN_GIT }}
