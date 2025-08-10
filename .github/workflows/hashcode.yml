@@ -8,7 +8,6 @@ on:
 jobs:
   publish-hashnode:
     runs-on: ubuntu-latest
-    continue-on-error: false  # Fail the workflow if publishing fails
     steps:
       - name: Checkout content
         uses: actions/checkout@v4
@@ -20,3 +19,10 @@ jobs:
           hashnode-publication-id: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           hashnode-publication-host: ${{ secrets.HASHNODE_PUBLICATION_HOST }}
           github-token: ${{ secrets.VAR_EDIT_TOKEN_GIT }}
+          # Pass the saved variables as inputs
+          saved-post-id: ${{ vars.HASHNODE_SAVED_POST_ID }}
+          saved-post-slug: ${{ vars.HASHNODE_SAVED_POST_SLUG }}
+          saved-post-title: ${{ vars.HASHNODE_SAVED_POST_TITLE }}
+          saved-post-url: ${{ vars.HASHNODE_SAVED_POST_URL }}
+          saved-post-published-at: ${{ vars.HASHNODE_SAVED_POST_PUBLISHED_AT }}
+          saved-post-updated-at: ${{ vars.HASHNODE_SAVED_POST_UPDATED_AT }}
