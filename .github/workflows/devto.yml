@@ -1,0 +1,24 @@
+name: Publish to Dev.to
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  publish-devto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content
+        uses: actions/checkout@v4
+        
+      - name: Publish to Dev.to
+        uses: gokulnathan66/article-automation/devto-publish@main
+        with:
+          devto-api-key: ${{ secrets.DEV_TO_API_KEY }}
+          github-token: ${{ secrets.VAR_EDIT_TOKEN_GIT }}
+          saved-post-id: ${{ vars.DEV_TO_SAVED_POST_ID }}
+          saved-post-title: ${{ vars.DEV_TO_SAVED_POST_TITLE }}
+          saved-post-url: ${{ vars.DEV_TO_SAVED_POST_URL }}
+          saved-post-published-at: ${{ vars.DEV_TO_SAVED_POST_PUBLISHED_AT }}
+          saved-post-updated-at: ${{ vars.DEV_TO_SAVED_POST_UPDATED_AT }}
